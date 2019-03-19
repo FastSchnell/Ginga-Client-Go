@@ -5,9 +5,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"net"
 	"sort"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -110,6 +112,6 @@ func (cls *Client) sign(data *Data) string {
 	sl := []string{strconv.Itoa(data.Timestamp), data.Nonce, cls.Token}
 	sort.Strings(sl)
 	h := sha1.New()
-
+    io.WriteString(h, strings.Join(sl, ""))
 	return fmt.Sprintf("%x", h.Sum(nil))
 }
