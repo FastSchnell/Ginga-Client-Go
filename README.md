@@ -7,9 +7,9 @@ Ginga-Client-Go
 Installation
 ------------
 
-Install Teheran using the "go get" command:
+Install Ginga-Client-Go using the "go get" command:
 
-    go get https://github.com/FastSchnell/Ginga-Client-Go/ginga
+    go get github.com/FastSchnell/Ginga-Client-Go/ginga
 
 
 Usage
