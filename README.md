@@ -34,7 +34,7 @@ defer c.Unlock()
 
 Server
 ------------
-Ginga Server [Ginga Server](https://github.com/FastSchnell/Ginga)
+[Ginga Server](https://github.com/FastSchnell/Ginga)
 
 License
 -------
