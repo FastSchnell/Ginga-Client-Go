@@ -17,18 +17,22 @@ Usage
 ```go
 import "Ginga-Client-Go/ginga"
 
-c := ginga.Client{
-    Token: "test_token",
-    Endpoint: "0.0.0.0:1903",
-    Nonce: "test_nonce",
+func testLock() {
+    c := ginga.Client{
+        Token: "test_token",
+        Endpoint: "0.0.0.0:1903",
+        Nonce: "test_nonce",
+    }
+
+    err := c.Lock()
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
+
+    defer c.Unlock()
 }
 
-err := c.Lock()
-if err != nil {
-    fmt.Println(err.Error())
-}
-
-defer c.Unlock()
 
 ```
 
