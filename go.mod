@@ -1,1 +1,0 @@
-module Ginga-Client-Go
